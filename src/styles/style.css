@@ -143,3 +143,7 @@ header {
     font-size: 1.7em;
 }
 /* End of Header */
+
+textarea {
+    font-family: "Quicksand", sans-serif;
+}

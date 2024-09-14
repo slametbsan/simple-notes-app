@@ -7,6 +7,7 @@ function getAllNotes() {
 }
 
 async function addNote({ title, body }) {
+    // console.log("addNote dipanggil");
     const options = {
         method: "POST",
         headers: {

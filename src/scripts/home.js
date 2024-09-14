@@ -5,11 +5,11 @@ import "../styles/style.css";
 import { addNote, getAllNotes, deleteNote } from "./data/api.js";
 
 const RENDER_EVENT = "RENDER_EVENT";
-
 const formInput = document.getElementById("add-form");
 
 formInput.addEventListener("submit", async (e) => {
     e.preventDefault();
+
     document.body.appendChild(document.createElement("loading-overlay"));
     const title = formInput.elements.title.value;
     const body = formInput.elements.body.value;
@@ -82,6 +82,7 @@ function createNoteElement(noteItem, index) {
 }
 
 document.addEventListener(RENDER_EVENT, async function () {
+    console.log("RENDER_EVENT triggered");
     const noteList = document.getElementById("note-lists");
     const loadingIndicator = document.createElement("loading-indicator");
 
@@ -96,7 +97,8 @@ document.addEventListener(RENDER_EVENT, async function () {
         }
     } finally {
         setTimeout(() => {
-            loadingIndicator.setAttribute("display", "none");
+            // loadingIndicator.setAttribute("display", "none");
+            loadingIndicator.remove();
         }, 500);
     }
 });
