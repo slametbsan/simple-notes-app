@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Aplikasi Catatan Sederhana</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <app-bar></app-bar>
+        </header>
+
+        <main>
+            <section id="note-form" class="card">
+                <note-form form-id="add-form"></note-form>
+            </section>
+
+            <section class="note-container" id="note-container">
+                <h2>Daftar Catatan</h2>
+                <div id="note-lists"></div>
+            </section>
+        </main>
+
+        <app-footer></app-footer>
+
+        <script src="bundle.js"></script>
+    </body>
+</html>
